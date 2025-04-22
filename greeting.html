@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Welcome to AloeVerify</title>
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    .greeting-container {
+      max-width: 600px;
+      margin: 100px auto;
+      padding: 40px;
+      background: #ffffff;
+      border-radius: 12px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      text-align: center;
+    }
+
+    .greeting-container h1 {
+      margin-bottom: 20px;
+      color: #2e7d67;
+    }
+
+    .greeting-container input[type="text"] {
+      width: 100%;
+      padding: 10px;
+      font-size: 16px;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+      margin-bottom: 20px;
+    }
+
+    .greeting-container button {
+      padding: 10px 20px;
+      background-color: #2e7d67;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+
+    .greeting-container button:hover {
+      background-color: #256b58;
+    }
+  </style>
+</head>
+<body>
+  <div class="greeting-container">
+    <h1>Welcome to AloeVerify</h1>
+    <p>Paste a source URL to begin web scraping and article verification.</p>
+    <input type="text" id="sourceUrl" value="index.html">
+    <br>
+    <button onclick="goToIndex()">Analyze Source</button>
+  </div>
+
+  <script>
+    function goToIndex() {
+      const url = document.getElementById('sourceUrl').value;
+      window.location.href = url;
+    }
+  </script>
+</body>
+</html>

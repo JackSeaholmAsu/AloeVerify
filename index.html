@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AloeVerify</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>AloeVerify</h1>
+
+    <div class="section" id="summary">
+      <h2>Summary</h2>
+      <p id="summaryText">Loading summary...</p>
+    </div>
+
+    <div class="section" id="claims">
+      <h2>Main Claims</h2>
+      <ul id="claimsList"></ul>
+    </div>
+
+    <div class="section" id="evidence">
+      <h2>Evidence</h2>
+      <ul id="evidenceList"></ul>
+    </div>
+
+    <div class="section" id="sources">
+      <h2>Sources</h2>
+      <ul id="sourcesList"></ul>
+    </div>
+
+    <div class="button-container">
+      <a href="greeting.html">
+        <button class="dig-button">Back To Search</button>
+      </a>
+      <a href="Timeline.html">
+        <button class="dig-button">Dig in</button>
+      </a>
+    </div>
+  </div>
+
+  <script>
+    // Sample data (you can later replace this with dynamic content)
+    const articleData = {
+      summary: "This article discusses the environmental benefits of using aloe vera for sustainable agriculture.",
+      claims: [
+        "Aloe vera improves soil quality.",
+        "It reduces the need for chemical fertilizers.",
+        "Aloe farming consumes less water."
+      ],
+      evidence: [
+        "Studies show aloe-enriched soil retains more moisture.",
+        "Field tests revealed higher crop yields with aloe-based compost.",
+        "Water usage dropped by 20% on aloe-supported farms."
+      ],
+      sources: [
+        "Journal of Sustainable Agriculture (2023)",
+        "Green Farming Research Institute",
+        "EcoAgri World Conference Presentation (2024)"
+      ]
+    };
+
+    // Populate the HTML with data
+    document.getElementById("summaryText").textContent = articleData.summary;
+
+    articleData.claims.forEach(claim => {
+      const li = document.createElement("li");
+      li.textContent = claim;
+      document.getElementById("claimsList").appendChild(li);
+    });
+
+    articleData.evidence.forEach(item => {
+      const li = document.createElement("li");
+      li.textContent = item;
+      document.getElementById("evidenceList").appendChild(li);
+    });
+
+    articleData.sources.forEach(source => {
+      const li = document.createElement("li");
+      li.textContent = source;
+      document.getElementById("sourcesList").appendChild(li);
+    });
+  </script>
+</body>
+</html>
