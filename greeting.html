@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Welcome to AloeVerify</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="css/style.css">
   <style>
     .greeting-container {
       max-width: 600px;
@@ -49,15 +49,15 @@
   <div class="greeting-container">
     <h1>Welcome to AloeVerify</h1>
     <p>Paste a source URL to begin web scraping and article verification.</p>
-    <input type="text" id="sourceUrl" value="index.html">
+    <input type="text" id="sourceUrl" value="https://www.utrgv.edu/newsroom/2025/02/utrgv-researchers-turn-aloe-vera-waste-into-natural-insecticide.htm#:~:text=Debasish%20Bandyopadhyay%2C%20has%20discovered%20a,a%20sustainable%20pest%20control%20alternative.">
     <br>
     <button onclick="goToIndex()">Analyze Source</button>
   </div>
 
   <script>
     function goToIndex() {
-      const url = document.getElementById('sourceUrl').value;
-      window.location.href = url;
+      // Regardless of input, always go to index.html
+      window.location.href = 'index.html';
     }
   </script>
 </body>
